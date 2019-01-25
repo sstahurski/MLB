@@ -1,5 +1,6 @@
 # MLB Code Challange
 Scott Stahurski
+========
 
 ![MLB Screen Shot](MLBSS.png)
 
@@ -44,7 +45,7 @@ The Index page is then started, and the MLBOrganization object is passed to it a
 
 Models Directory  
 ========
-These are basically the POCO objects created to for the information.  
+These are basically the POCO objects created for parsing and holding the information.  
 
 Services Directory  
 ========
