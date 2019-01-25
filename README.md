@@ -12,10 +12,8 @@ Code Features
 ========
 The project is an Model View Controller project, so there are the respected Model, View, Controllers directories.
 
-Controllers Directory
-
-
-HomeController.cs
+Controllers Directory  
+HomeController.cs  
 ```c#
 public class HomeController : Controller
     {
@@ -34,17 +32,17 @@ public class HomeController : Controller
         }
 
     }
-```
+```  
 As you can see the HomeController creates an instance of the TeamService object that retrieves the information from the web from the link that was provided.  https://api.mobileqa.mlbinfra.com/api/interview/v1/records
-After the TeamService object is created, the GetMLBStandings parses out the JSON records and creates an MLBOrganization object, whic contain all of the Leagues, Divisions, and Teams in a sorted order.
+After the TeamService object is created, the GetMLBStandings parses out the JSON records and creates an MLBOrganization object, whic contain all of the Leagues, Divisions, and Teams in a sorted order.  
 
 The Index page is then started, and the MLBOrganization object is passed to it as a Razor object.
 
-Models Directory
-These are basically the POCO objects created to for the information.
+Models Directory  
+These are basically the POCO objects created to for the information.  
 
-Services Directory
-There is one file, TeamsServices.cs which is a file that downloads the JSON data and creates a MLBOrgganization object
+Services Directory  
+There is one file, TeamsServices.cs which is a file that downloads the JSON data and creates a MLBOrgganization object.  
 
 ```c#
     public class TeamsService
@@ -72,9 +70,9 @@ There is one file, TeamsServices.cs which is a file that downloads the JSON data
 
 ```
 
-Views Directory
-In the Views\Home Directory there is an Index.cshtml file that displays the data.
-Leagues have their own tab, and the teams fade in when displayed.
+Views Directory  
+In the Views\Home Directory there is an Index.cshtml file that displays the data.  
+Leagues have their own tab, and the teams fade in when displayed.  
 ```html
 <!-- setup the league tabs -->
     <ul class="nav nav-tabs">
@@ -95,8 +93,8 @@ Leagues have their own tab, and the teams fade in when displayed.
 
 Code Hilights
 --- 
-Robust, if the data changes , for example a new league ( say Canadian League or Cuban League) is added, this code will handle it and its divisions and teams.
+Robust, if the data changes , for example a new league ( say Canadian League or Cuban League) is added, this code will handle it and its divisions and teams.  
 
-Use of bootstrap for visual display, as well as icons were used.
+Use of bootstrap for visual display, as well as icons were used.  
 
 ![MLB Screen Shot](MLBSS.png)
