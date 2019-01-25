@@ -1,0 +1,72 @@
+﻿@model MLB.Models.MLBOrganization
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <!-- setup the league tabs -->
+    <ul class="nav nav-tabs">
+        @{
+
+            Boolean firstTab = true;
+            foreach (MLB.Models.League league in Model.leagues)
+            {
+                //name the tab #href to the league name
+
+                <li class=@(firstTab?"active":"")><a data-toggle="tab" href="#@league.leagueName"><img src="@Url.Content(league.iconImagePath)" alt="" style="height:48px;width:48px;" />@league.leagueName</a></li>
+                firstTab = false;
+
+            }
+        }
+    </ul>
+
+    <!-- set up the content for each tab -->
+
+    <div class="tab-content">
+        @{
+
+            Boolean firstTabDisplay = true;
+            foreach (MLB.Models.League league in Model.leagues)
+            {
+
+                <div id="@league.leagueName" class="@(firstTabDisplay ? "tab-pane fade in active" : "tab-pane fade")">
+
+                    <!-- create the table of divisions and teams-->
+                    <table style="width:100%">
+                        @{
+                            foreach (MLB.Models.Division division in league.divisions)
+                            {
+
+                                <tr>
+                                    <th><h3>@division.divisionName</h3></th>
+                                </tr>
+                                <tr>
+                                    <th>Team</th>
+                                    <th>Wins</th>
+                                    <th>Losses</th>
+                                </tr>
+
+                                foreach (MLB.Models.TeamDataRecord team in division.divisionTeams)
+                                {
+                                    <tr>
+                                        <td><img src="@Url.Content(team.iconImagePath)" alt="" style="height:48px;width:48px;" />@team.Team</td>
+                                        <td>@team.Wins</td>
+                                        <td>@team.Losses</td>
+                                    </tr>
+                                }
+                            }
+                        }
+                    </table>
+                </div>
+
+                firstTabDisplay = false;
+}
+        }
+    </div>
+
+
+
+
+</div>
+
