@@ -105,4 +105,6 @@ Robust, if the data changes , for example a new league ( say Canadian League or 
 
 Use of bootstrap for visual display, as well as icons were used.  
 
+Last there are also a few basic unit tests for the data, TeamsServices, and the POCO objects.
+
 
