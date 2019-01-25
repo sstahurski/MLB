@@ -1,6 +1,9 @@
 # MLB Code Challange
 Scott Stahurski
 
+![MLB Screen Shot](MLBSS.png)
+
+
 ASP MVC C# 
 ========
 This was written with Visual Studio 2017.  
@@ -13,6 +16,7 @@ Code Features
 The project is an Model View Controller project, so there are the respected Model, View, Controllers directories.
 
 Controllers Directory  
+========
 HomeController.cs  
 ```c#
 public class HomeController : Controller
@@ -39,9 +43,11 @@ After the TeamService object is created, the GetMLBStandings parses out the JSON
 The Index page is then started, and the MLBOrganization object is passed to it as a Razor object.
 
 Models Directory  
+========
 These are basically the POCO objects created to for the information.  
 
 Services Directory  
+========
 There is one file, TeamsServices.cs which is a file that downloads the JSON data and creates a MLBOrgganization object.  
 
 ```c#
@@ -71,6 +77,7 @@ There is one file, TeamsServices.cs which is a file that downloads the JSON data
 ```
 
 Views Directory  
+========
 In the Views\Home Directory there is an Index.cshtml file that displays the data.  
 Leagues have their own tab, and the teams fade in when displayed.  
 ```html
@@ -97,4 +104,4 @@ Robust, if the data changes , for example a new league ( say Canadian League or 
 
 Use of bootstrap for visual display, as well as icons were used.  
 
-![MLB Screen Shot](MLBSS.png)
+
