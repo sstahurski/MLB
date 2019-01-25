@@ -7,7 +7,9 @@ Scott Stahurski
 
 ASP MVC C# 
 ========
-This was written with Visual Studio 2017.  
+This was written with Visual Studio 2017. 
+I did test this as well by opening up with Visual Studio 2015 and it worked as well.  
+  
 Clone this repository and open the MLB Code Challenge.sln.  
 After that you must build the solution. Build | Build Solution  
 Then you will run the program by selecting Debug | Start Debugging or selecting the Run icon on your tool bar ▶  
