@@ -31,8 +31,6 @@ public class HomeController : Controller
             //get the Org data from the service
             MLBOrganization org = teamService.GetMLBStandings();
 
-            //set up the Model for the view
-
             return View("Index",org);
         }
 
